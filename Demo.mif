@@ -1,0 +1,239 @@
+-- Altera Memory Initialization File (MIF)
+
+DEPTH = 2048;
+WIDTH = 16;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+  BEGIN
+    [000..7FF] : 0000;  -- Default to NOP
+
+           000 : 2870;  -- JUMP Volumes
+           001 : 80B6;  -- 	CALL Wait
+           002 : 80BB;  -- 	CALL Next
+           003 : 380A;  -- 	JPOS HighestNote
+           004 : BFEC;  -- 	LOADI -20
+           005 : 10C6;  -- 	STORE DelayTime
+           006 : 08C8;  -- 	LOAD Gsharp
+           007 : 50D4;  -- 	OR Octave2
+           008 : 80A7;  -- 	CALL PlayNote
+           009 : 2801;  -- 	JUMP LowestNote
+           00A : 80B6;  -- 	CALL Wait
+           00B : 80BB;  -- 	CALL Next
+           00C : 3815;  -- 	JPOS Scale
+           00D : B840;  -- 	LOADI 64
+           00E : 9842;  -- 	OUT Volume
+           00F : BFEC;  -- 	LOADI -20
+           010 : 10C6;  -- 	STORE DelayTime
+           011 : 08CF;  -- 	LOAD Dsharp
+           012 : 50DA;  -- 	OR Octave8
+           013 : 80A7;  -- 	CALL PlayNote
+           014 : 280A;  -- 	JUMP HighestNote
+           015 : 80B6;  -- 	CALL Wait
+           016 : 80BB;  -- 	CALL Next
+           017 : 3841;  -- 	JPOS Sine
+           018 : BFF8;  -- 	LOADI -8
+           019 : 10C6;  -- 	STORE DelayTime
+           01A : 08CC;  -- 	LOAD C
+           01B : 50D6;  -- 	OR Octave4
+           01C : 80A7;  -- 	CALL PlayNote
+           01D : BFF8;  -- 	LOADI -8
+           01E : 10C6;  -- 	STORE DelayTime
+           01F : 08CE;  -- 	LOAD D
+           020 : 50D6;  -- 	OR Octave4
+           021 : 80A7;  -- 	CALL PlayNote
+           022 : BFF8;  -- 	LOADI -8
+           023 : 10C6;  -- 	STORE DelayTime
+           024 : 08D0;  -- 	LOAD E
+           025 : 50D6;  -- 	OR Octave4
+           026 : 80A7;  -- 	CALL PlayNote
+           027 : BFF8;  -- 	LOADI -8
+           028 : 10C6;  -- 	STORE DelayTime
+           029 : 08D1;  -- 	LOAD F
+           02A : 50D6;  -- 	OR Octave4
+           02B : 80A7;  -- 	CALL PlayNote
+           02C : BFF8;  -- 	LOADI -8
+           02D : 10C6;  -- 	STORE DelayTime
+           02E : 08D3;  -- 	LOAD G
+           02F : 50D6;  -- 	OR Octave4
+           030 : 80A7;  -- 	CALL PlayNote
+           031 : BFF8;  -- 	LOADI -8
+           032 : 10C6;  -- 	STORE DelayTime
+           033 : 08C9;  -- 	LOAD A
+           034 : 50D6;  -- 	OR Octave4
+           035 : 80A7;  -- 	CALL PlayNote
+           036 : BFF8;  -- 	LOADI -8
+           037 : 10C6;  -- 	STORE DelayTime
+           038 : 08CB;  -- 	LOAD B
+           039 : 50D6;  -- 	OR Octave4
+           03A : 80A7;  -- 	CALL PlayNote
+           03B : BFF8;  -- 	LOADI -8
+           03C : 10C6;  -- 	STORE DelayTime
+           03D : 08CC;  -- 	LOAD C
+           03E : 50D7;  -- 	OR Octave5
+           03F : 80A7;  -- 	CALL PlayNote
+           040 : 2815;  -- 	JUMP Scale
+           041 : 80B6;  -- 	CALL Wait
+           042 : 80BB;  -- 	CALL Next
+           043 : 384C;  -- 	JPOS Square
+           044 : B801;  -- 	LOADI 1
+           045 : 9841;  -- 	OUT Wave
+           046 : BFEC;  -- 	LOADI -20
+           047 : 10C6;  -- 	STORE DelayTime
+           048 : 08C9;  -- 	LOAD A
+           049 : 50D6;  -- 	OR Octave4
+           04A : 80A7;  -- 	CALL PlayNote
+           04B : 2841;  -- 	JUMP Sine
+           04C : 80B6;  -- 	CALL Wait
+           04D : 80BB;  -- 	CALL Next
+           04E : 3857;  -- 	JPOS Waves
+           04F : B802;  -- 	LOADI 2
+           050 : 9841;  -- 	OUT Wave
+           051 : BFEC;  -- 	LOADI -20
+           052 : 10C6;  -- 	STORE DelayTime
+           053 : 08C9;  -- 	LOAD A
+           054 : 50D6;  -- 	OR Octave4
+           055 : 80A7;  -- 	CALL PlayNote
+           056 : 284C;  -- 	JUMP Square
+           057 : 80B6;  -- 	CALL Wait
+           058 : 80BB;  -- 	CALL Next
+           059 : 3870;  -- 	JPOS Volumes
+           05A : B801;  -- 	LOADI 1
+           05B : 9841;  -- 	OUT Wave
+           05C : BFF8;  -- 	LOADI -8
+           05D : 10C6;  -- 	STORE DelayTime
+           05E : 08C9;  -- 	LOAD A
+           05F : 50D6;  -- 	OR Octave4
+           060 : 80A7;  -- 	CALL PlayNote
+           061 : B802;  -- 	LOADI 2
+           062 : 9841;  -- 	OUT Wave
+           063 : BFF8;  -- 	LOADI -8
+           064 : 10C6;  -- 	STORE DelayTime
+           065 : 08C9;  -- 	LOAD A
+           066 : 50D6;  -- 	OR Octave4
+           067 : 80A7;  -- 	CALL PlayNote
+           068 : B804;  -- 	LOADI 4
+           069 : 9841;  -- 	OUT Wave
+           06A : BFF8;  -- 	LOADI -8
+           06B : 10C6;  -- 	STORE DelayTime
+           06C : 08C9;  -- 	LOAD A
+           06D : 50D6;  -- 	OR Octave4
+           06E : 80A7;  -- 	CALL PlayNote
+           06F : 2857;  -- 	JUMP Waves
+           070 : 80B6;  -- 	CALL Wait
+           071 : 80BB;  -- 	CALL Next
+           072 : 3857;  -- 	JPOS Waves
+           073 : B801;  -- 	LOADI 1
+           074 : 9841;  -- 	OUT Wave
+           075 : 08DB;  -- 	LOAD Vol1
+           076 : 9842;  -- 	OUT Volume
+           077 : BFF8;  -- 	LOADI -8
+           078 : 10C6;  -- 	STORE DelayTime
+           079 : 08C9;  -- 	LOAD A
+           07A : 50D6;  -- 	OR Octave4
+           07B : 80A7;  -- 	CALL PlayNote
+           07C : 08DC;  -- 	LOAD Vol2
+           07D : 9842;  -- 	OUT Volume
+           07E : BFF8;  -- 	LOADI -8
+           07F : 10C6;  -- 	STORE DelayTime
+           080 : 08C9;  -- 	LOAD A
+           081 : 50D6;  -- 	OR Octave4
+           082 : 80A7;  -- 	CALL PlayNote
+           083 : 08DD;  -- 	LOAD Vol3
+           084 : 9842;  -- 	OUT Volume
+           085 : BFF8;  -- 	LOADI -8
+           086 : 10C6;  -- 	STORE DelayTime
+           087 : 08C9;  -- 	LOAD A
+           088 : 50D6;  -- 	OR Octave4
+           089 : 80A7;  -- 	CALL PlayNote
+           08A : 08DE;  -- 	LOAD Vol4
+           08B : 9842;  -- 	OUT Volume
+           08C : BFF8;  -- 	LOADI -8
+           08D : 10C6;  -- 	STORE DelayTime
+           08E : 08C9;  -- 	LOAD A
+           08F : 50D6;  -- 	OR Octave4
+           090 : 80A7;  -- 	CALL PlayNote
+           091 : 08DF;  -- 	LOAD Vol5
+           092 : 9842;  -- 	OUT Volume
+           093 : BFF8;  -- 	LOADI -8
+           094 : 10C6;  -- 	STORE DelayTime
+           095 : 08C9;  -- 	LOAD A
+           096 : 50D6;  -- 	OR Octave4
+           097 : 80A7;  -- 	CALL PlayNote
+           098 : 08E0;  -- 	LOAD Vol6
+           099 : 9842;  -- 	OUT Volume
+           09A : BFF8;  -- 	LOADI -8
+           09B : 10C6;  -- 	STORE DelayTime
+           09C : 08C9;  -- 	LOAD A
+           09D : 50D6;  -- 	OR Octave4
+           09E : 80A7;  -- 	CALL PlayNote
+           09F : 08E1;  -- 	LOAD Vol7
+           0A0 : 9842;  -- 	OUT Volume
+           0A1 : BFF8;  -- 	LOADI -8
+           0A2 : 10C6;  -- 	STORE DelayTime
+           0A3 : 08C9;  -- 	LOAD A
+           0A4 : 50D6;  -- 	OR Octave4
+           0A5 : 80A7;  -- 	CALL PlayNote
+           0A6 : 2870;  -- 	JUMP Volumes
+           0A7 : 9840;  -- 	OUT Beep
+           0A8 : 80B1;  -- 	CALL Delay
+           0A9 : 80AB;  -- 	CALL End
+           0AA : 8800;  -- 	RETURN
+           0AB : BFFF;  -- 	LOADI  -1
+           0AC : 10C6;  -- 	STORE  DelayTime
+           0AD : B800;  -- 	LOADI  0
+           0AE : 9840;  -- 	OUT    Beep
+           0AF : 80B1;  -- 	CALL   Delay
+           0B0 : 8800;  -- 	RETURN
+           0B1 : 9802;  -- 	OUT    Timer
+           0B2 : 9002;  -- 	IN     Timer
+           0B3 : 18C6;  -- 	ADD    DelayTime
+           0B4 : 30B2;  -- 	JNEG   WaitingLoop
+           0B5 : 8800;  -- 	RETURN
+           0B6 : 9000;  -- 	IN Switches
+           0B7 : 6019;  -- 	SHIFT -9
+           0B8 : 40BA;  -- 	JZERO WaitEnd
+           0B9 : 28B6;  -- 	JUMP Wait
+           0BA : 8800;  -- 	RETURN
+           0BB : 9000;  -- 	IN Switches
+           0BC : 6018;  -- 	SHIFT -8
+           0BD : 38C0;  -- 	JPOS NextLoop
+           0BE : B800;  -- 	LOADI 0
+           0BF : 8800;  -- 	RETURN
+           0C0 : 9000;  -- 	IN Switches
+           0C1 : 6018;  -- 	SHIFT -8
+           0C2 : 40C4;  -- 	JZERO NextEnd
+           0C3 : 28C0;  -- 	JUMP NextLoop
+           0C4 : B801;  -- 	LOADI 1
+           0C5 : 8800;  -- 	RETURN
+           0C6 : 0000;  -- DelayTime: DW 0
+           0C7 : 0000;  -- Note: DW 0
+           0C8 : 0001;  -- Gsharp: DW &B0000000000000001 ;2
+           0C9 : 0002;  -- A: DW &B0000000000000010 ;2
+           0CA : 0003;  -- Asharp: DW &B0000000000000011 ;2
+           0CB : 0004;  -- B: DW &B0000000000000100 ;2
+           0CC : 0005;  -- C: DW &B0000000000000101
+           0CD : 0006;  -- Csharp: DW &B0000000000000110
+           0CE : 0007;  -- D: DW &B0000000000000111
+           0CF : 0008;  -- Dsharp: DW &B0000000000001000
+           0D0 : 0009;  -- E: DW &B0000000000001001
+           0D1 : 000A;  -- F: DW &B0000000000001010
+           0D2 : 000B;  -- Fsharp: DW &B0000000000001011
+           0D3 : 000C;  -- G: DW &B0000000000001100
+           0D4 : 0000;  -- Octave2: DW &B0000000000000000
+           0D5 : 0010;  -- Octave3: DW &B0000000000010000
+           0D6 : 0020;  -- Octave4: DW &B0000000000100000
+           0D7 : 0030;  -- Octave5: DW &B0000000000110000
+           0D8 : 0040;  -- Octave6: DW &B0000000001000000
+           0D9 : 0050;  -- Octave7: DW &B0000000001010000
+           0DA : 0060;  -- Octave8: DW &B0000000001100000
+           0DB : 0040;  -- Vol1: DW &B1000000
+           0DC : 0020;  -- Vol2: DW &B0100000
+           0DD : 0010;  -- Vol3: DW &B0010000
+           0DE : 0008;  -- Vol4: DW &B0001000
+           0DF : 0004;  -- Vol5: DW &B0000100
+           0E0 : 0002;  -- Vol6: DW &B0000010
+           0E1 : 0001;  -- Vol7: DW &B0000001
+  END;
