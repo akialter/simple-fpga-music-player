@@ -7,7 +7,7 @@ This VHDL project was programmed on a DE10-Standard FPGA board using Intel Quart
 The instructors provided ```SCOMP.vhd```, which simulated a 16-bit processor with simple instructions, such as add, load/store, and jump.
 
 We were tasked to develop ```TONEGEN.vhd```, which defined a simple DDS (direct digital synthesis) device that generated sine waves in range of 100 Hz to 5000 Hz and 
-produced a musical note within 1% error. We then programmed this VHDL code to DE10-Standard board connected to a speaker, and wrote SongTest.asm assembly code for SCOMP 
+produced a musical note within 1% error. We then programmed this VHDL code to DE10-Standard board connected to a speaker, and wrote ```SongTest.asm``` assembly code for SCOMP 
 to play the melody of "Twinkle Twinkle Little Star".
 
 ## Functionality
